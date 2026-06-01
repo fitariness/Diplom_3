@@ -15,8 +15,8 @@ class HeaderPage(BasePage):
 
     @allure.step("Проверить, что активна ссылка «Конструктор»")
     def is_constructor_link_active(self) -> bool:
-        return len(self.driver.find_elements(*Loc.CONSTRUCTOR_LINK_ACTIVE)) > 0
+        return len(self.find_elements(Loc.CONSTRUCTOR_LINK_ACTIVE)) > 0
 
     @allure.step("Проверить, что активна ссылка «Лента заказов»")
     def is_feed_link_active(self) -> bool:
-        return len(self.driver.find_elements(*Loc.FEED_LINK_ACTIVE)) > 0
+        return len(self.find_elements(Loc.FEED_LINK_ACTIVE)) > 0
